@@ -1,0 +1,13 @@
+@import 'primereact/resources/themes/lara-light-blue/theme.css';
+@import 'primeflex/primeflex.scss';
+
+body {
+  background-image: url('./assets/background.svg');
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+}
+
+.p-card-content {
+  padding: 0 !important;
+}
