@@ -49,7 +49,7 @@ const Test = ({ maxItems, onItemCount, searchText }: TestProps) => {
           <Card 
             key={index}
             title={item.name}
-            subTitle={item.price}
+            subTitle={`£${item.price.toFixed(2)}`}
             className="p-m-2 mb-3 shadow-4"
             data-testid='product'
           />
