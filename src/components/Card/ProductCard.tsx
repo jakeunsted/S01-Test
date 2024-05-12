@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import Test from './Test'
-import CardHeader from './Card/CardHeader'
+import Test from '../Test'
+import CardHeader from './CardHeader'
 
 interface ProductCardProps {
   title: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PrimeReactProvider } from 'primereact/api';
 import './App.scss'
-import ProductCard from './components/ProductCard';
+import ProductCard from './components/Card/ProductCard';
 
 /**
  * Renders the main application component.

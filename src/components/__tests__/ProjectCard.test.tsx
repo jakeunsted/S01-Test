@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
-import ProductCard from '../ProductCard';
+import ProductCard from '../Card/ProductCard';
 import '@testing-library/jest-dom'
 
 describe('ProductCard', () => {
