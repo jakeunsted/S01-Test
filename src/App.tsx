@@ -1,6 +1,5 @@
-import React from 'react';
 import { PrimeReactProvider } from 'primereact/api';
-import './App.scss'
+import './App.scss';
 import ProductCard from './components/Card/ProductCard';
 
 /**
@@ -8,13 +7,13 @@ import ProductCard from './components/Card/ProductCard';
  * @returns The rendered JSX element.
  */
 function App() {
-  return (
-    <PrimeReactProvider>
-      <div className='h-screen flex'>
-        <ProductCard title='Sorted Items:' />
-      </div>
-    </PrimeReactProvider>
-  )
+	return (
+		<PrimeReactProvider>
+			<div className='h-screen flex'>
+				<ProductCard title='Sorted Items:' />
+			</div>
+		</PrimeReactProvider>
+	);
 }
 
-export default App
+export default App;

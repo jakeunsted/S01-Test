@@ -13,16 +13,16 @@ interface CardHeaderProps {
  * @returns {JSX.Element} The rendered card header.
  */
 function CardHeader({ title, onSearchInput }: CardHeaderProps) {
-  return (
-    <div className='flex'>
-      <h2 className='flex-none mr-4'>{title}</h2>
-      <InputText 
-        placeholder='Search'
-        className='flex-auto max-h-2rem my-auto'
-        onChange={onSearchInput}
-      />
-    </div>
-  );
+	return (
+		<div className='flex'>
+			<h2 className='flex-none mr-4'>{title}</h2>
+			<InputText 
+				placeholder='Search'
+				className='flex-auto max-h-2rem my-auto'
+				onChange={onSearchInput}
+			/>
+		</div>
+	);
 }
 
 export default CardHeader;

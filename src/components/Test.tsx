@@ -15,14 +15,14 @@ interface TestProps {
 }
 
 const data: Item[] = [
-  { name: 'Item A', price: 125 },
-  { name: 'Item B', price: 230 },
-  { name: 'Item C', price: 295 },
-  { name: 'Item D', price: 245 },
-  { name: 'Item E', price: 900 },
-  { name: 'Item F', price: 875 },
-  { name: 'Item G', price: 235 },
-  { name: 'Item H', price: 400 },
+	{ name: 'Item A', price: 125 },
+	{ name: 'Item B', price: 230 },
+	{ name: 'Item C', price: 295 },
+	{ name: 'Item D', price: 245 },
+	{ name: 'Item E', price: 900 },
+	{ name: 'Item F', price: 875 },
+	{ name: 'Item G', price: 235 },
+	{ name: 'Item H', price: 400 },
 ];
 
 /**
@@ -34,29 +34,29 @@ const data: Item[] = [
  * @returns {JSX.Element} The rendered Test component.
  */
 const Test = ({ maxItems, onItemCount, searchText }: TestProps) => {
-  // Filter and sort data based on search text and price
-  const filteredData: Item[] = data.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()));
-  const sortedData: Item[] = filteredData.sort((a, b) => a.price - b.price);
+	// Filter and sort data based on search text and price
+	const filteredData: Item[] = data.filter(item => item.name.toLowerCase().includes(searchText.toLowerCase()));
+	const sortedData: Item[] = filteredData.sort((a, b) => a.price - b.price);
 
-  // Update the item count in the parent component
-  useEffect(() => {
-    onItemCount(filteredData.length);
-  }, [filteredData.length]);
+	// Update the item count in the parent component
+	useEffect(() => {
+		onItemCount(filteredData.length);
+	}, [filteredData.length]);
 
-  return (
-    <>
-      {sortedData.slice(0, maxItems).map((item, index) => (
-          <Card 
-            key={index}
-            title={item.name}
-            subTitle={`£${item.price.toFixed(2)}`}
-            className="p-m-2 mb-3 shadow-4"
-            data-testid='product'
-          />
-      ))}
-    </>
-  )
-}
+	return (
+		<>
+			{sortedData.slice(0, maxItems).map((item, index) => (
+				<Card 
+					key={index}
+					title={item.name}
+					subTitle={`£${item.price.toFixed(2)}`}
+					className="p-m-2 mb-3 shadow-4"
+					data-testid='product'
+				/>
+			))}
+		</>
+	);
+};
 
 export default Test;
 
