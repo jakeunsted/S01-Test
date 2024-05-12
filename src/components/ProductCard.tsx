@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import Test from './Test'
@@ -34,7 +34,7 @@ function ProductCard({ title }: ProductCardProps) {
    * @param {React.ChangeEvent<HTMLInputElement>} e - The input event object.
    * @returns {void}
    */
-  const onSearchInput = (e) => {
+  const onSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   }
 

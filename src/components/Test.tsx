@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Card } from 'primereact/card';
 
 // Define the Item interface - name and price
@@ -51,6 +51,7 @@ const Test = ({ maxItems, onItemCount, searchText }: TestProps) => {
             title={item.name}
             subTitle={item.price}
             className="p-m-2 mb-3 shadow-4"
+            data-testid='product'
           />
       ))}
     </>
